@@ -1,0 +1,26 @@
+.congratWindow {
+  width: 40%;
+  height: 200px;
+  display:  flex;
+  flex-direction: column; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  position: absolute;
+  left: 30%;
+}
+
+
+.congratilation {
+  display: block;
+  margin: 10px;
+  color: white;
+  font-size: 25px; 
+  font-weight: 700;
+}
+
+button {
+  display: block;
+} 

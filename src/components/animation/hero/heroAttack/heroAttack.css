@@ -1,0 +1,5 @@
+.hero-attack {
+  position: relative;  
+  right: 10px;
+  align-self: flex-end;
+}

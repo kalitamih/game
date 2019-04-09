@@ -1,0 +1,18 @@
+.fightArea {  
+  display: flex;  
+  justify-content: space-between;
+  margin-top:auto; 
+  min-height: 660px;
+}
+
+.layout {
+  height: 100vh;
+  display: flex;
+  flex-direction: column; 
+ 
+}
+
+.menuTask {
+  height: 33vh;
+  align-self: center;
+}
