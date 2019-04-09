@@ -1,8 +1,0 @@
-body {
-  background: url(./background.png) no-repeat center fixed;
-  height: 100vh;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}

@@ -1,7 +1,0 @@
-.monster-idle {
-  position: relative;
-  right: 100px;
-  bottom: 45px;
-  align-self: flex-end;
-  transform: scale(-1,1);
-}
