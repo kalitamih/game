@@ -1,0 +1,4 @@
+.monster-death {
+  align-self: flex-end; 
+  transform: scale(-1,1);
+}
