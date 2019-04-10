@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "00127664e2afa27638d4254695dd65ef",
-    "url": "/game/static/media/jolt.00127664.wav"
+    "revision": "cef458a1d3f0f5c4789674da13ba0940",
+    "url": "/game/static/media/marble.cef458a1.wav"
   },
   {
-    "revision": "cbf0bd2135ceedd913f4",
-    "url": "/game/static/css/main.36e0640b.chunk.css"
+    "revision": "0d67d8575b0f99b269ad",
+    "url": "/game/static/css/main.1429fac7.chunk.css"
   },
   {
     "revision": "bab8f84a0f4d6b7ca58b",
     "url": "/game/static/js/runtime~main.2d0fbc73.js"
   },
   {
-    "revision": "b119f2bbea9f6b1db34a",
-    "url": "/game/static/js/2.7a4b8ad1.chunk.js"
+    "revision": "d559010102ec6945098a",
+    "url": "/game/static/js/2.68e59f0b.chunk.js"
   },
   {
     "revision": "fde5ac2ba4e66f1e97493dea1127a30b",
@@ -100,12 +100,12 @@ self.__precacheManifest = [
     "url": "/game/static/media/glisten.81893af0.wav"
   },
   {
-    "revision": "cbf0bd2135ceedd913f4",
-    "url": "/game/static/js/main.a331abd1.chunk.js"
+    "revision": "00127664e2afa27638d4254695dd65ef",
+    "url": "/game/static/media/jolt.00127664.wav"
   },
   {
-    "revision": "cef458a1d3f0f5c4789674da13ba0940",
-    "url": "/game/static/media/marble.cef458a1.wav"
+    "revision": "0d67d8575b0f99b269ad",
+    "url": "/game/static/js/main.c31ab780.chunk.js"
   },
   {
     "revision": "6cc92dad86ecd5292e3aa75d796e706b",
@@ -188,6 +188,14 @@ self.__precacheManifest = [
     "url": "/game/static/media/thaw.c93c2c8a.wav"
   },
   {
+    "revision": "88d007d2d7dc451d651879c803278438",
+    "url": "/game/static/media/throb.88d007d2.wav"
+  },
+  {
+    "revision": "0d03663b4c4d9f1bdfeac9569ff03ab0",
+    "url": "/game/static/media/caress.0d03663b.wav"
+  },
+  {
     "revision": "208c34c4c9167565a94496d688d3f657",
     "url": "/game/static/media/skull.208c34c4.png"
   },
@@ -196,7 +204,7 @@ self.__precacheManifest = [
     "url": "/game/static/media/background.6abdd541.png"
   },
   {
-    "revision": "4ad076bf4dffb1f38fba29e7bc374cc6",
+    "revision": "3d797effd21bb41ef26cdab969dd25e0",
     "url": "/game/index.html"
   }
 ];
