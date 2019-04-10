@@ -27,6 +27,8 @@ import nasty from './nasty.wav';
 import mock from './mock.wav';
 import sag from './sag.wav';
 import thaw from './thaw.wav';
+import throb from './throb.wav';
+import caress from './caress.wav';
 
 const audioObject = {
   blink,
@@ -58,6 +60,8 @@ const audioObject = {
   mock,
   sag,
   thaw,
+  throb,
+  caress,
 };
 
 export default audioObject;
