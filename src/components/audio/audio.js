@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import ReactAudioPlayer from 'react-audio-player';
+import { history as historyPropTypes } from 'history-prop-types';
 import PropTypes from 'prop-types';
 import mapDispatchToProps from '../mapDispatchToProps/mapDispatchToProps';
 import { audioObject, audioGuess } from './pronunciation';
@@ -23,28 +25,28 @@ class Audio extends Component {
   }
 
   handleMenu = (event) => {
-    const { setMenuPage } = this.props;
+    const { history } = this.props;
     event.preventDefault();
-    setMenuPage();
+    history.push('/menu');
   };
 
   heroCure = () => {
     const {
       setCureHero,
       setCureMonster,
-      setNothingPage,
+      history,
     } = this.props;
     const { value, randomKey } = this.state;
     if (value === randomKey) setCureHero();
     else setCureMonster();
-    setNothingPage();
+    history.push('/nothing');
   }
 
   heroAttack = () => {
     const {
       setHeroAttack,
       setMonsterAttack,
-      setNothingPage,
+      history,
     } = this.props;
     const { value, randomKey } = this.state;
     if (value === randomKey) {
@@ -52,7 +54,7 @@ class Audio extends Component {
     } else {
       setMonsterAttack();
     }
-    setNothingPage();
+    history.push('/nothing');
   }
 
   handleHeroAttack = (event) => {
@@ -75,14 +77,14 @@ class Audio extends Component {
   }
 
   handleKeyHeroAttack = (event) => {
-    const { setMenuPage } = this.props;
+    const { history } = this.props;
 
     if (event.key === 'Enter') {
       this.heroAttack();
     }
 
     if (event.key === 'Escape') {
-      setMenuPage();
+      history.push('/menu');
     }
 
     if (event.ctrlKey) {
@@ -115,14 +117,13 @@ class Audio extends Component {
 }
 
 Audio.propTypes = {
-  setMenuPage: PropTypes.func.isRequired,
   setDefaultKey: PropTypes.func.isRequired,
   setMonsterAttack: PropTypes.func.isRequired,
-  setNothingPage: PropTypes.func.isRequired,
   setHeroAttack: PropTypes.func.isRequired,
   setCureHero: PropTypes.func.isRequired,
   setCureMonster: PropTypes.func.isRequired,
   keyboard: PropTypes.bool.isRequired,
+  history: PropTypes.shape(historyPropTypes).isRequired,
 };
 
 const mapStateToProps = store => ({ keyboard: store.keyboard.audioKey });
@@ -130,4 +131,4 @@ const mapStateToProps = store => ({ keyboard: store.keyboard.audioKey });
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Audio);
+)(withRouter(Audio));

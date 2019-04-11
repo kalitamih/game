@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import { history as historyPropTypes } from 'history-prop-types';
 import PropTypes from 'prop-types';
 import mapDispatchToProps from '../mapDispatchToProps/mapDispatchToProps';
 import randomMathTask from './randomMathTask';
@@ -27,19 +29,19 @@ class Mathematics extends Component {
     const {
       setCureHero,
       setCureMonster,
-      setNothingPage,
+      history,
     } = this.props;
     const { value, result } = this.state;
     if (parseInt(value, 10) === result) setCureHero();
     else setCureMonster();
-    setNothingPage();
+    history.push('/nothing');
   }
 
   heroAttack = () => {
     const {
       setHeroAttack,
       setMonsterAttack,
-      setNothingPage,
+      history,
     } = this.props;
     const { value, result } = this.state;
     if (parseInt(value, 10) === result) {
@@ -47,13 +49,13 @@ class Mathematics extends Component {
     } else {
       setMonsterAttack();
     }
-    setNothingPage();
+    history.push('/nothing');
   }
 
   handleMenu = (event) => {
-    const { setMenuPage } = this.props;
+    const { history } = this.props;
     event.preventDefault();
-    setMenuPage();
+    history.push('/menu');
   };
 
   handleHeroAttack = (event) => {
@@ -76,13 +78,13 @@ class Mathematics extends Component {
   }
 
   handleKeyHeroAttack = (event) => {
-    const { setMenuPage } = this.props;
+    const { history } = this.props;
     if (event.key === 'Enter') {
       this.heroAttack();
     }
 
     if (event.key === 'Escape') {
-      setMenuPage();
+      history.push('/menu');
     }
 
     if (event.ctrlKey) {
@@ -116,14 +118,13 @@ class Mathematics extends Component {
 }
 
 Mathematics.propTypes = {
-  setMenuPage: PropTypes.func.isRequired,
   setDefaultKey: PropTypes.func.isRequired,
   setMonsterAttack: PropTypes.func.isRequired,
-  setNothingPage: PropTypes.func.isRequired,
   setHeroAttack: PropTypes.func.isRequired,
   setCureHero: PropTypes.func.isRequired,
   setCureMonster: PropTypes.func.isRequired,
   keyboard: PropTypes.bool.isRequired,
+  history: PropTypes.shape(historyPropTypes).isRequired,
 };
 
 const mapStateToProps = store => ({ keyboard: store.keyboard.mathKey });
@@ -131,4 +132,4 @@ const mapStateToProps = store => ({ keyboard: store.keyboard.mathKey });
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Mathematics);
+)(withRouter(Mathematics));

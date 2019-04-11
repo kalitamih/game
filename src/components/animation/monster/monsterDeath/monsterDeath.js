@@ -1,14 +1,15 @@
 import Spritesheet from 'react-responsive-spritesheet';
 import React from 'react';
 import { connect } from 'react-redux';
+import { history as historyPropTypes } from 'history-prop-types';
+import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import monsterDeath from './monsterDeath.png';
 import killMonster from '../../../../actions/kill';
-import congratilationPage from '../../../../actions/congratilation';
 import './monsterDeath.css';
 
 const MonsterDeath = (props) => {
-  const { setKillMonster, setCongratilationPage } = props;
+  const { setKillMonster, history } = props;
   const deathClass = 'monster-death';
   return (
     <Spritesheet
@@ -20,7 +21,7 @@ const MonsterDeath = (props) => {
       fps={10}
       onPause={() => {
         setKillMonster();
-        setCongratilationPage();
+        history.push('/congratilation');
       }}
     />
   );
@@ -28,15 +29,14 @@ const MonsterDeath = (props) => {
 
 MonsterDeath.propTypes = {
   setKillMonster: PropTypes.func.isRequired,
-  setCongratilationPage: PropTypes.func.isRequired,
+  history: PropTypes.shape(historyPropTypes).isRequired,
 };
 
 const mapDispatchToProps = dispatch => ({
   setKillMonster: () => dispatch(killMonster()),
-  setCongratilationPage: () => dispatch(congratilationPage()),
 });
 
-export default connect(
+export default withRouter(connect(
   null,
   mapDispatchToProps,
-)(MonsterDeath);
+)(MonsterDeath));

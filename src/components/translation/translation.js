@@ -1,5 +1,7 @@
 import React, { Fragment, Component } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import { history as historyPropTypes } from 'history-prop-types';
 import PropTypes from 'prop-types';
 import mapDispatchToProps from '../mapDispatchToProps/mapDispatchToProps';
 import { translationObject, translationGuess } from './vocabulary';
@@ -20,16 +22,16 @@ class Translation extends Component {
   }
 
   handleMenu = (event) => {
-    const { setMenuPage } = this.props;
+    const { history } = this.props;
     event.preventDefault();
-    setMenuPage();
+    history.push('/menu');
   };
 
   heroCure = () => {
     const {
       setCureHero,
       setCureMonster,
-      setNothingPage,
+      history,
     } = this.props;
     const {
       value,
@@ -37,14 +39,14 @@ class Translation extends Component {
     } = this.state;
     if (translationObject[randomKey].includes(value)) setCureHero();
     else setCureMonster();
-    setNothingPage();
+    history.push('/nothing');
   }
 
   heroAttack = () => {
     const {
       setHeroAttack,
       setMonsterAttack,
-      setNothingPage,
+      history,
     } = this.props;
     const {
       value,
@@ -55,7 +57,7 @@ class Translation extends Component {
     } else {
       setMonsterAttack();
     }
-    setNothingPage();
+    history.push('/nothing');
   }
 
   handleHeroAttack = (event) => {
@@ -78,14 +80,14 @@ class Translation extends Component {
   }
 
   handleKeyHeroAttack = (event) => {
-    const { setMenuPage } = this.props;
+    const { history } = this.props;
 
     if (event.key === 'Enter') {
       this.heroAttack();
     }
 
     if (event.key === 'Escape') {
-      setMenuPage();
+      history.push('/menu');
     }
 
     if (event.ctrlKey) {
@@ -100,8 +102,19 @@ class Translation extends Component {
         <div className="translationMet">
           <span className="taskHeading">{randomKey}</span>
           <span className="taskHeading">Your answer:</span>
-          <input type="text" id="userAudioInput" ref={this.textInput} value={value} onChange={this.handleChange} onKeyDown={this.handleKeyHeroAttack} />
-          <Buttons attack={this.handleHeroAttack} cure={this.handleHeroCure} menu={this.handleMenu} />
+          <input
+            type="text"
+            id="userAudioInput"
+            ref={this.textInput}
+            value={value}
+            onChange={this.handleChange}
+            onKeyDown={this.handleKeyHeroAttack}
+          />
+          <Buttons
+            attack={this.handleHeroAttack}
+            cure={this.handleHeroCure}
+            menu={this.handleMenu}
+          />
         </div>
       </Fragment>
     );
@@ -109,10 +122,9 @@ class Translation extends Component {
 }
 
 Translation.propTypes = {
-  setMenuPage: PropTypes.func.isRequired,
+  history: PropTypes.shape(historyPropTypes).isRequired,
   setDefaultKey: PropTypes.func.isRequired,
   setMonsterAttack: PropTypes.func.isRequired,
-  setNothingPage: PropTypes.func.isRequired,
   setHeroAttack: PropTypes.func.isRequired,
   setCureHero: PropTypes.func.isRequired,
   setCureMonster: PropTypes.func.isRequired,
@@ -124,4 +136,4 @@ const mapStateToProps = store => ({ keyboard: store.keyboard.translationKey });
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Translation);
+)(withRouter(Translation));

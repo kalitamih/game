@@ -1,24 +1,24 @@
 import Spritesheet from 'react-responsive-spritesheet';
 import React, { Component, Fragment } from 'react';
+import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { history as historyPropTypes } from 'history-prop-types';
 import PropTypes from 'prop-types';
 import Sound from 'react-sound';
 import cureDefault from '../../../actions/defaultCure';
 import changeHeroHealth from '../../../actions/changeHeroHealth';
 import changeMonsterHealth from '../../../actions/changeMonsterHealth';
-import menuPage from '../../../actions/menuPage';
 import cureSound from './cure.mp3';
 import cureImage from './cure.png';
 
 class Cure extends Component {
   render() {
-    const { cure } = this.props;
+    const { cure, history } = this.props;
     const { cureHero, cureMonster } = cure;
     const {
       setCureDefault,
       setHeroHealth,
       setMonsterHealth,
-      setMenuPage,
     } = this.props;
     return (
       <Fragment>
@@ -32,7 +32,7 @@ class Cure extends Component {
             if (cureHero) setHeroHealth(20);
             if (cureMonster) setMonsterHealth(20);
             setCureDefault();
-            setMenuPage();
+            history.push('/menu');
           }}
         />
         <Sound
@@ -52,22 +52,21 @@ Cure.propTypes = {
     cureHero: PropTypes.bool,
     cureMonster: PropTypes.bool,
   }).isRequired,
-  setMenuPage: PropTypes.func.isRequired,
   setHeroHealth: PropTypes.func.isRequired,
   setMonsterHealth: PropTypes.func.isRequired,
   setCureDefault: PropTypes.func.isRequired,
+  history: PropTypes.shape(historyPropTypes).isRequired,
 };
 
 const mapStateToProps = store => ({ cure: store.cure });
 
 const mapDispatchToProps = dispatch => ({
-  setMenuPage: () => dispatch(menuPage()),
   setHeroHealth: health => dispatch(changeHeroHealth(health)),
   setMonsterHealth: health => dispatch(changeMonsterHealth(health)),
   setCureDefault: () => dispatch(cureDefault()),
 });
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Cure);
+)(Cure));

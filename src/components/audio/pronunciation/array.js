@@ -29,6 +29,10 @@ import sag from './sag.wav';
 import thaw from './thaw.wav';
 import throb from './throb.wav';
 import caress from './caress.wav';
+import detest from './detest.wav';
+import decoy from './decoy.wav';
+import decay from './decay.wav';
+import savage from './savage.wav';
 
 const audioObject = {
   blink,
@@ -62,6 +66,10 @@ const audioObject = {
   thaw,
   throb,
   caress,
+  detest,
+  decoy,
+  decay,
+  savage,
 };
 
 export default audioObject;

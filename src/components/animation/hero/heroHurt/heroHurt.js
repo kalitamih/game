@@ -1,5 +1,7 @@
 import Spritesheet from 'react-responsive-spritesheet';
 import React, { Fragment } from 'react';
+import { history as historyPropTypes } from 'history-prop-types';
+import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Sound from 'react-sound';
@@ -7,7 +9,6 @@ import HeroHurtImage from './heroHurt-min.png';
 import fightDefault from '../../../../actions/fightDefault';
 import heroDeath from '../../../../actions/heroDeath';
 import changeHeroHealth from '../../../../actions/changeHeroHealth';
-import menuPage from '../../../../actions/menuPage';
 import HurtHeroSound from './hurt.mp3';
 import './heroHurt.css';
 
@@ -16,9 +17,8 @@ const HeroHurt = (props) => {
     setFightDefault,
     setHeroDeath,
     setHeroHealth,
-    setMenuPage,
   } = props;
-  const { health } = props;
+  const { health, history } = props;
   const hurtClass = 'hero-hurt';
   return (
     <Fragment>
@@ -32,8 +32,8 @@ const HeroHurt = (props) => {
         onPause={() => {
           if (health > 20) {
             setHeroHealth(-20);
-            setMenuPage();
             setFightDefault();
+            history.push('/menu');
           } else {
             setHeroHealth(-20);
             setHeroDeath();
@@ -52,8 +52,8 @@ HeroHurt.propTypes = {
   setFightDefault: PropTypes.func.isRequired,
   setHeroDeath: PropTypes.func.isRequired,
   setHeroHealth: PropTypes.func.isRequired,
-  setMenuPage: PropTypes.func.isRequired,
   health: PropTypes.number.isRequired,
+  history: PropTypes.shape(historyPropTypes).isRequired,
 };
 
 const mapStateToProps = store => ({ health: store.health.hero });
@@ -62,10 +62,9 @@ const mapDispatchToProps = dispatch => ({
   setFightDefault: () => dispatch(fightDefault()),
   setHeroDeath: () => dispatch(heroDeath()),
   setHeroHealth: health => dispatch(changeHeroHealth(health)),
-  setMenuPage: () => dispatch(menuPage()),
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(HeroHurt);
+)(withRouter(HeroHurt));

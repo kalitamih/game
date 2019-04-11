@@ -14,9 +14,6 @@ const HeroIdle = () => {
       steps={5}
       fps={10}
       loop
-      onPause={() => {
-        console.log('onPause');
-      }}
     />
   );
 };
