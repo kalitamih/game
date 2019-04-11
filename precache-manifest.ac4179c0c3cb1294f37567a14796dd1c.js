@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/game/static/media/incisive.cc11cc4a.wav"
   },
   {
-    "revision": "e4f92a3c2fe5eb299600",
+    "revision": "55ea1fc726506f43669f",
     "url": "/game/static/css/main.a38b9318.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = [
     "url": "/game/static/js/runtime~main.2d0fbc73.js"
   },
   {
-    "revision": "191a81c675fd72898e3f",
-    "url": "/game/static/js/2.861932eb.chunk.js"
+    "revision": "6266becbe46eac264f60",
+    "url": "/game/static/js/2.ea5eb82b.chunk.js"
   },
   {
     "revision": "fde5ac2ba4e66f1e97493dea1127a30b",
@@ -116,8 +116,8 @@ self.__precacheManifest = [
     "url": "/game/static/media/vicious.7de07caf.wav"
   },
   {
-    "revision": "e4f92a3c2fe5eb299600",
-    "url": "/game/static/js/main.611baa6f.chunk.js"
+    "revision": "55ea1fc726506f43669f",
+    "url": "/game/static/js/main.44b7265b.chunk.js"
   },
   {
     "revision": "6e1a9298c3d232789979c256a164f704",
@@ -232,7 +232,7 @@ self.__precacheManifest = [
     "url": "/game/static/media/background.6abdd541.png"
   },
   {
-    "revision": "5428656bc6421c7e66ae1a523ce59c99",
+    "revision": "e449f7bf612ffb71b5ad8f2ad56de91e",
     "url": "/game/index.html"
   }
 ];
