@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "cef458a1d3f0f5c4789674da13ba0940",
-    "url": "/game/static/media/marble.cef458a1.wav"
+    "revision": "7de07cafa0d12c1ed52457c9d6ce645c",
+    "url": "/game/static/media/vicious.7de07caf.wav"
   },
   {
-    "revision": "0d67d8575b0f99b269ad",
-    "url": "/game/static/css/main.1429fac7.chunk.css"
+    "revision": "a54ed5597baaa7b248d4",
+    "url": "/game/static/css/main.23cfe13e.chunk.css"
   },
   {
     "revision": "bab8f84a0f4d6b7ca58b",
     "url": "/game/static/js/runtime~main.2d0fbc73.js"
   },
   {
-    "revision": "d559010102ec6945098a",
-    "url": "/game/static/js/2.68e59f0b.chunk.js"
+    "revision": "1d9ecc6c143fcc055f0c",
+    "url": "/game/static/js/2.9e7fa34c.chunk.js"
   },
   {
     "revision": "fde5ac2ba4e66f1e97493dea1127a30b",
@@ -104,16 +104,16 @@ self.__precacheManifest = [
     "url": "/game/static/media/jolt.00127664.wav"
   },
   {
-    "revision": "0d67d8575b0f99b269ad",
-    "url": "/game/static/js/main.c31ab780.chunk.js"
+    "revision": "cef458a1d3f0f5c4789674da13ba0940",
+    "url": "/game/static/media/marble.cef458a1.wav"
   },
   {
     "revision": "6cc92dad86ecd5292e3aa75d796e706b",
     "url": "/game/static/media/smear.6cc92dad.wav"
   },
   {
-    "revision": "7de07cafa0d12c1ed52457c9d6ce645c",
-    "url": "/game/static/media/vicious.7de07caf.wav"
+    "revision": "a54ed5597baaa7b248d4",
+    "url": "/game/static/js/main.2c1d4fe4.chunk.js"
   },
   {
     "revision": "cc11cc4a3e03f1aba44a854b3b3298b4",
@@ -196,6 +196,22 @@ self.__precacheManifest = [
     "url": "/game/static/media/caress.0d03663b.wav"
   },
   {
+    "revision": "d18f85cb41321948320357f932ce8d84",
+    "url": "/game/static/media/detest.d18f85cb.wav"
+  },
+  {
+    "revision": "0efffbfd6532d3621d8c7322cc409cdd",
+    "url": "/game/static/media/decoy.0efffbfd.wav"
+  },
+  {
+    "revision": "71c1e739a7ca836d1bedc9d3d107568f",
+    "url": "/game/static/media/decay.71c1e739.wav"
+  },
+  {
+    "revision": "270ead0ed086130364ca84e347f853dd",
+    "url": "/game/static/media/savage.270ead0e.wav"
+  },
+  {
     "revision": "208c34c4c9167565a94496d688d3f657",
     "url": "/game/static/media/skull.208c34c4.png"
   },
@@ -204,7 +220,7 @@ self.__precacheManifest = [
     "url": "/game/static/media/background.6abdd541.png"
   },
   {
-    "revision": "3d797effd21bb41ef26cdab969dd25e0",
+    "revision": "c3a53e0f7ad8649840765c878c0157fb",
     "url": "/game/index.html"
   }
 ];
