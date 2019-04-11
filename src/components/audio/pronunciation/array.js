@@ -33,6 +33,9 @@ import detest from './detest.wav';
 import decoy from './decoy.wav';
 import decay from './decay.wav';
 import savage from './savage.wav';
+import prejudice from './prejudice.wav';
+import sneer from './sneer.wav';
+import astonish from './astonish.wav';
 
 const audioObject = {
   blink,
@@ -70,6 +73,9 @@ const audioObject = {
   decoy,
   decay,
   savage,
+  prejudice,
+  sneer,
+  astonish,
 };
 
 export default audioObject;
