@@ -4,16 +4,16 @@ self.__precacheManifest = [
     "url": "/game/static/media/vicious.7de07caf.wav"
   },
   {
-    "revision": "a54ed5597baaa7b248d4",
-    "url": "/game/static/css/main.23cfe13e.chunk.css"
+    "revision": "f503bccbd964a891d3b2",
+    "url": "/game/static/css/main.5d6d226f.chunk.css"
   },
   {
     "revision": "bab8f84a0f4d6b7ca58b",
     "url": "/game/static/js/runtime~main.2d0fbc73.js"
   },
   {
-    "revision": "1d9ecc6c143fcc055f0c",
-    "url": "/game/static/js/2.9e7fa34c.chunk.js"
+    "revision": "472b83b7ebd8373c8caa",
+    "url": "/game/static/js/2.c45aad87.chunk.js"
   },
   {
     "revision": "fde5ac2ba4e66f1e97493dea1127a30b",
@@ -24,16 +24,28 @@ self.__precacheManifest = [
     "url": "/game/static/media/heroHurt-min.06850c83.png"
   },
   {
+    "revision": "636291e9f29f9c5de361e7307ac177c8",
+    "url": "/game/static/media/heroDeath-min.636291e9.png"
+  },
+  {
+    "revision": "ab1ba11ade3c5e2f4201789bdf3f7605",
+    "url": "/game/static/media/monsterAttack.ab1ba11a.png"
+  },
+  {
+    "revision": "77f1d669e39132698a3e5de110671fcc",
+    "url": "/game/static/media/monsterHurt.77f1d669.png"
+  },
+  {
+    "revision": "69babb90d111a72aa87857679fb2ba78",
+    "url": "/game/static/media/monsterDeath.69babb90.png"
+  },
+  {
     "revision": "9015ff68341663d62a0c6b78f6054189",
     "url": "/game/static/media/hurt.9015ff68.mp3"
   },
   {
     "revision": "a8f8dc4004254296ca5abbdc982e77f7",
     "url": "/game/static/media/heroIdleImage-min.a8f8dc40.png"
-  },
-  {
-    "revision": "636291e9f29f9c5de361e7307ac177c8",
-    "url": "/game/static/media/heroDeath-min.636291e9.png"
   },
   {
     "revision": "8ea28506a46b1ebb4cdee06046c64375",
@@ -52,24 +64,12 @@ self.__precacheManifest = [
     "url": "/game/static/media/attack.9d70044a.mp3"
   },
   {
-    "revision": "ab1ba11ade3c5e2f4201789bdf3f7605",
-    "url": "/game/static/media/monsterAttack.ab1ba11a.png"
-  },
-  {
     "revision": "b4210d21cdd192dc9727c7aa48fc9ef6",
     "url": "/game/static/media/monsterIdle.b4210d21.png"
   },
   {
     "revision": "dc80fc88088047250f4db6276b619895",
     "url": "/game/static/media/hurt.dc80fc88.mp3"
-  },
-  {
-    "revision": "77f1d669e39132698a3e5de110671fcc",
-    "url": "/game/static/media/monsterHurt.77f1d669.png"
-  },
-  {
-    "revision": "69babb90d111a72aa87857679fb2ba78",
-    "url": "/game/static/media/monsterDeath.69babb90.png"
   },
   {
     "revision": "702f06cf3d6a08fcc1a1fe7b68782ef2",
@@ -112,8 +112,8 @@ self.__precacheManifest = [
     "url": "/game/static/media/smear.6cc92dad.wav"
   },
   {
-    "revision": "a54ed5597baaa7b248d4",
-    "url": "/game/static/js/main.2c1d4fe4.chunk.js"
+    "revision": "f503bccbd964a891d3b2",
+    "url": "/game/static/js/main.0861922e.chunk.js"
   },
   {
     "revision": "cc11cc4a3e03f1aba44a854b3b3298b4",
@@ -220,7 +220,7 @@ self.__precacheManifest = [
     "url": "/game/static/media/background.6abdd541.png"
   },
   {
-    "revision": "c3a53e0f7ad8649840765c878c0157fb",
+    "revision": "8544d3d1470487ae7a6456b30b2f769d",
     "url": "/game/index.html"
   }
 ];
